@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F4"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top_menu"
+        android:layout_alignParentTop="true"
+        layout="@layout/top_menu" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_menu"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textSize="16sp" 
+        android:background="@android:color/white"/>
+
+    <FrameLayout
+        android:id="@+id/listview_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/reply_button"
+        android:layout_below="@+id/title" >
+
+        <TextView
+            android:id="@+id/listView_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:gravity="top"
+            android:paddingTop="60dp"
+            android:text="@string/listview_bg" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#00000000" >
+        </ListView>
+
+        <ImageView
+            android:id="@+id/collection"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="22dp"
+            android:alpha="1"
+            android:background="@drawable/collection_n"
+            android:contentDescription="@string/app_name" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/reply_button"
+        android:background="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/reply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/reply_button"
+        android:hint=""
+        android:maxLines="4"
+        android:text=""
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/reply_button"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/reply"
+        android:background="@android:color/transparent"
+        android:text="@string/reply" />
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_menu"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_alignParentTop="true" >
+
+    <Button
+        android:id="@+id/left"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="#FF7F00"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <FrameLayout
+        android:id="@+id/search_frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_toLeftOf="@+id/login"
+        android:layout_toRightOf="@+id/left"
+        android:background="#FF7F00" >
+
+        <ImageView
+            android:id="@+id/search_bg_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/refresh"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/order_change_tv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/search_bg_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <FrameLayout
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="1"
+            android:background="@drawable/search_long" >
+
+            <ImageView
+                android:id="@+id/search_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:alpha="1"
+                android:background="@drawable/search"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/search_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:alpha="1"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/order_change_b"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/login"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#FF7F00" >
+
+        <com.example.tool.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/login_iv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/login_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+</RelativeLayout>

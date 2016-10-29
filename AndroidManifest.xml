@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jason4s"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/noTitle" >
+        <activity
+            android:name="com.example.jason4s.Welcome"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.jason4s.Main" >
+        </activity>
+        <activity android:name="com.example.jason4s.Login" >
+        </activity>
+        <activity android:name="com.example.jason4s.Register" >
+        </activity>
+        <activity android:name="com.example.page.Search" >
+        </activity>
+        <activity android:name="com.example.page.City" >
+        </activity>
+        <activity android:name="com.example.page.Information_list" >
+        </activity>
+        <activity android:name="com.example.page.User_information" >
+        </activity>
+        <activity android:name="com.example.page.Post_send" >
+        </activity>
+        <activity android:name="com.example.page.Information_message" >
+        </activity>
+        <activity android:name="com.example.page.Post" >
+        </activity>
+        <activity android:name="com.example.page.Curriculum_vitae_show" >
+        </activity>
+        <activity android:name="com.example.page.Curriculum_vitae_update" >
+        </activity>
+        <activity android:name="com.example.page.Type_list" >
+        </activity>
+        <activity android:name="com.example.page.Company_show" >
+        </activity>
+        <activity android:name="com.example.page.Job_show" >
+        </activity>
+        <activity android:name="com.example.page.Setting" >
+        </activity>
+        <activity android:name="com.example.page.Company_update" >
+        </activity>
+        <activity android:name="com.example.page.Job_update" >
+        </activity>
+        
+        
+    </application>
+
+</manifest>

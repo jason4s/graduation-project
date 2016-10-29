@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F4">
+
+    <include
+        android:id="@+id/top_menu"
+        android:layout_alignParentTop="true"
+        layout="@layout/top_menu" />
+
+    <FrameLayout
+        android:id="@+id/listview_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_menu" 
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/listView_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:gravity="top"
+            android:paddingTop="60dp"
+            android:text="@string/listview_bg" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#00000000" >
+        </ListView>
+    </FrameLayout>
+
+</RelativeLayout>

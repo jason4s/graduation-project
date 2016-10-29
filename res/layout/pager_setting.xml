@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#F0F0F4">
+    
+    <RelativeLayout
+        android:id="@+id/top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="#FF7F00"
+        android:orientation="horizontal">
+        
+        <Button 
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_back"
+            android:layout_alignParentLeft="true"
+            />
+        
+        <Button
+            android:id="@+id/top"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="#FF7F00"
+            android:text="@string/new_job" 
+            android:gravity="center"
+            android:textColor="@android:color/white"/>
+        
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/job"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/top_menu"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="20dp"
+        android:text="@string/job_setting" />
+    
+    <Button
+        android:id="@+id/company"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/job"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="20dp"
+        android:text="@string/company_setting" />
+    
+    <Button
+        android:id="@+id/cv"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/company"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="20dp"
+        android:text="@string/cv_setting" />
+    
+    <Button
+        android:id="@+id/collection"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/cv"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="20dp"
+        android:text="@string/cv_collection" />
+
+</RelativeLayout>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <ImageView
+        android:id="@+id/imageView_face"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/FrameLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/jiuye_face"
+        android:contentDescription="@string/app_name" />
+
+    <FrameLayout
+        android:id="@+id/FrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="285dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#FFFFFF" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TableRow
+                android:id="@+id/TableRow1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginBottom="5dp" >
+
+                <RelativeLayout
+                    android:id="@+id/z2"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="#ff677c" >
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/zhaosheng2" 
+                        android:contentDescription="@string/app_name"/>
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/imageView2"
+                        android:layout_alignRight="@+id/imageView2"
+                        android:layout_below="@+id/imageView2"
+                        android:gravity="center"
+                        android:text="@string/zhaosheng2"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/z3"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:background="#f88743" >
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/zhaosheng3" 
+                        android:contentDescription="@string/app_name"/>
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/imageView3"
+                        android:layout_alignRight="@+id/imageView3"
+                        android:layout_below="@+id/imageView3"
+                        android:gravity="center"
+                        android:text="@string/zhaosheng3"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/TableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="140dp" >
+
+                <RelativeLayout
+                    android:id="@+id/z4"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1" 
+                    android:background="#93cf0f">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:layout_above="@+id/textView4"
+                        android:layout_alignRight="@+id/textView4"
+                        android:layout_alignLeft="@+id/textView4"
+                        android:src="@drawable/zhaosheng4" 
+                        android:contentDescription="@string/app_name"/>
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="35dp"
+                        android:text="@string/zhaosheng4" 
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/z5"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:background="#f5b812">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:layout_above="@+id/textView5"
+                        android:layout_alignRight="@+id/textView5"
+                        android:layout_alignLeft="@+id/textView5"
+                        android:src="@drawable/zhaosheng5" 
+                        android:contentDescription="@string/app_name"/>
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="35dp"
+                        android:gravity="center"
+                        android:text="@string/zhaosheng5"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+            </TableRow>
+        </TableLayout>
+
+        <RelativeLayout
+            android:id="@+id/z1"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_gravity="center"
+            android:background="@drawable/zhaosheng">
+            
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_above="@+id/textView1"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/zhaosheng1" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textColor="@android:color/white"
+                android:gravity="center_horizontal"
+                android:textSize="16sp"
+                android:layout_marginBottom="22dp"
+                android:layout_alignParentBottom="true"
+                android:text="@string/zhaosheng1" />
+
+            
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

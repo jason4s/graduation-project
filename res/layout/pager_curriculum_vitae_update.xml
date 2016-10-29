@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F4" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#FF7F00" >
+
+        <Button
+            android:id="@+id/left"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_back"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/cv"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/right"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/finish"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/top" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            
+            <TextView
+                android:id="@+id/cv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="right|center_vertical"
+                android:text="@string/cv0"
+                android:textSize="16sp" />
+            
+            <EditText
+                    android:id="@+id/cv_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/cv_name"
+                    android:hint=""
+                    android:maxLength="15" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/person_information"
+                android:textColor="#FF7F00"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/textView1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#FF7F00" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" >
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/birthday"
+                    android:layout_marginTop="10dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv1"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/name"
+                    android:hint=""
+                    android:maxLength="15" >
+
+                    <requestFocus />
+                </EditText>
+
+                <TextView
+                    android:id="@+id/birthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/name"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv2"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/birthday_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@+id/name_et"
+                    android:layout_below="@+id/name_et" >
+
+                    <EditText
+                        android:id="@+id/birthday_et_year"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:hint=""
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textColor="#ff00ff"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/date_between"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/birthday_et_month"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:hint=""
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textColor="#ff00ff"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/date_between"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/birthday_et_day"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:hint=""
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textColor="#ff00ff"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/length_of_employment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/birthday"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv3"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/leng_th_of_employment_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@+id/name_et"
+                    android:layout_below="@+id/birthday_et"
+                    android:hint=""
+                    android:maxLength="15" />
+
+                <TextView
+                    android:id="@+id/sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/birthday"
+                    android:layout_below="@+id/length_of_employment"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv4"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/sex_rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@+id/name_et"
+                    android:layout_below="@+id/leng_th_of_employment_et"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radio0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/man"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radio1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lady"
+                        android:textSize="20sp" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/marital_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/sex"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv5"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/marital_status_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@+id/name_et"
+                    android:layout_below="@+id/sex_rg"
+                    android:hint=""
+                    android:maxLength="15" />
+
+                <TextView
+                    android:id="@+id/habitation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/birthday"
+                    android:layout_below="@+id/marital_status"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv6"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/habitation_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@+id/name_et"
+                    android:layout_below="@+id/marital_status_et"
+                    android:hint=""
+                    android:maxLength="15" />
+
+                <TextView
+                    android:id="@+id/hukou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/birthday"
+                    android:layout_below="@+id/habitation"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv7"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/hukou_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@+id/name_et"
+                    android:layout_below="@+id/habitation_et"
+                    android:hint=""
+                    android:maxLength="15" />
+
+                <TextView
+                    android:id="@+id/mobile_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/hukou"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv8"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/mobile_phone_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@+id/name_et"
+                    android:layout_below="@+id/hukou_et"
+                    android:hint=""
+                    android:inputType="phone"
+                    android:maxLength="15" />
+
+                <TextView
+                    android:id="@+id/mail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/birthday"
+                    android:layout_below="@+id/mobile_phone"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv9"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/mail_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@+id/name_et"
+                    android:layout_below="@+id/mobile_phone_et"
+                    android:hint=""
+                    android:maxLength="15" />
+
+                <TextView
+                    android:id="@+id/job_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/mail"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv10"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/job_status_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@+id/name_et"
+                    android:layout_below="@+id/mail_et"
+                    android:hint=""
+                    android:maxLength="15" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/relativeLayout1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:text="@string/job_intention"
+                android:textColor="#FF7F00"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/l2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/textView2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#FF7F00" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" >
+
+                <TextView
+                    android:id="@+id/report_duty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv11"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/report_duty_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/report_duty"
+                    android:hint=""
+                    android:maxLength="15" />
+
+                <TextView
+                    android:id="@+id/job_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/report_duty"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv12"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/job_type_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@+id/report_duty_et"
+                    android:layout_below="@+id/report_duty_et"
+                    android:hint=""
+                    android:maxLength="15" />
+
+                <TextView
+                    android:id="@+id/want_industry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/job_type"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv13"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/want_industry_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@+id/report_duty_et"
+                    android:layout_below="@+id/job_type_et"
+                    android:hint=""
+                    android:maxLength="15" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/want_industry"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv14"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/location_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@+id/report_duty_et"
+                    android:layout_below="@+id/want_industry_et"
+                    android:hint=""
+                    android:maxLength="15" />
+
+                <TextView
+                    android:id="@+id/want_salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/Aim_Function"
+                    android:layout_below="@+id/location"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv15"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/want_salary_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@+id/report_duty_et"
+                    android:layout_below="@+id/location_et"
+                    android:hint=""
+                    android:maxLength="15" />
+
+                <TextView
+                    android:id="@+id/Aim_Function"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/want_salary"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv16"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/Aim_Function_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@+id/report_duty_et"
+                    android:layout_below="@+id/want_salary_et"
+                    android:hint=""
+                    android:maxLength="15" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:text="@string/education"
+                android:textColor="#FF7F00"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/l3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/textView3"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#FF7F00" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l3"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" >
+
+                <TextView
+                    android:id="@+id/school"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/level_of_education"
+                    android:layout_marginTop="10dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv17"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/school_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/school"
+                    android:hint=""
+                    android:maxLength="15" />
+
+                <TextView
+                    android:id="@+id/level_of_education"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/school"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv18"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/level_of_education_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@+id/school_et"
+                    android:layout_below="@+id/school_et"
+                    android:hint=""
+                    android:maxLength="15" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/relativeLayout3"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:text="@string/skill"
+                android:textColor="#FF7F00"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/l4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/textView4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#FF7F00" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" >
+
+                <TextView
+                    android:id="@+id/skills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/cv19"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/skills_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/skills"
+                    android:gravity="left|top"
+                    android:hint=""
+                    android:maxLength="15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/skills" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
